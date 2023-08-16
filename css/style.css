@@ -423,6 +423,37 @@ progress {
     .display-2 {
       font-size: 4.5rem; } }
 
+.btn_comprar{
+  display: inline !important;
+  text-align: center; 
+  width: 100px !important; 
+  height:100px !important; 
+  background-color:#07414F;
+  border-radius:50%;
+  position: fixed;
+  left:85vw;
+  top: 40vw; 
+  z-index: 10;
+}
+  
+@media (max-width: 1200px){
+    .btn_comprar{
+      width: 50px !important;
+      height: 50px !important;
+      position: fixed;
+      top: 80vh;
+      left: 80vw;
+    }
+    .canasta{
+      font-size: 35px !important;
+      position: relative;
+      left: -37px !important;
+      top: -3px !important;
+    }
+  }
+ 
+
+
 .display-3 {
   font-size: calc(1.525rem + 3.3vw);
   font-weight: 300;
