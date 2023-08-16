@@ -31,6 +31,10 @@ function ready(){
         button.addEventListener('click',restarCantidad);
     }
 
+    var guardarvalor = document.getElementById('agregar_carrito_producto');
+    guardarvalor.addEventListener('click', agregarAlCarritoClicked);
+
+
     //Agregamos funcionalidad al boton Agregar al carrito
     var botonesAgregarAlCarrito = document.getElementsByClassName('btn_comprar');
     for(var i=0; i<botonesAgregarAlCarrito.length;i++){
@@ -54,7 +58,9 @@ function pagarClicked(){
 }
 //Funciòn que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event){
-    var button = event.target;
+    cantidad = document.getElementById("cantidad_carrito_producto").get
+    sessionStorage.setItem("articulo", "cantidad")
+    // var button = event.target;
     // var item = button.parentElement;
     // var titulo = item.getElementsByClassName('titulo-item')[0].innerText;
     // var precio = item.getElementsByClassName('precio-item')[0].innerText;
