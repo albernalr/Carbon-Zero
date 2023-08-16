@@ -30,9 +30,13 @@ function ready(){
         var button = botonesRestarCantidad[i];
         button.addEventListener('click',restarCantidad);
     }
-
     var guardarvalor = document.getElementById('agregar_carrito_producto');
     guardarvalor.addEventListener('click', agregarAlCarritoClicked);
+        
+
+    var btncarrito = document.getElementById('boton_carrito');
+    btncarrito.addEventListener('click', hacerVisibleCarrito)
+    
 
 
     //Agregamos funcionalidad al boton Agregar al carrito
@@ -58,8 +62,11 @@ function pagarClicked(){
 }
 //Funciòn que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event){
-    cantidad = document.getElementById("cantidad_carrito_producto").get
-    sessionStorage.setItem("articulo", "cantidad")
+    cantidad = document.getElementById("cantidad_carrito_producto").value;
+    titulo = document.getElementById("titulo_articulo").textContent;
+    sessionStorage.setItem(titulo, cantidad);
+    window.alert("Agregado con exito al carrito");
+
     // var button = event.target;
     // var item = button.parentElement;
     // var titulo = item.getElementsByClassName('titulo-item')[0].innerText;
@@ -68,20 +75,8 @@ function agregarAlCarritoClicked(event){
     // console.log(imagenSrc);
 
     // agregarItemAlCarrito(titulo, precio, imagenSrc);
-
-    hacerVisibleCarrito();
 }
 
-//Funcion que hace visible el carrito
-function hacerVisibleCarrito(){
-    carritoVisible = true;
-    var carrito = document.getElementsByClassName('carrito')[0];
-    carrito.style.marginRight = '0';
-    carrito.style.opacity = '1';
-
-    var items =document.getElementsByClassName('contenedor-items')[0];
-    items.style.width = '60%';
-}
 
 //Funciòn que agrega un item al carrito
 function agregarItemAlCarrito(titulo, precio, imagenSrc){
