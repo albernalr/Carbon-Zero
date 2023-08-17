@@ -32,6 +32,9 @@ function ready(){
 
     document.getElementsByClassName('btn-pagar')[0].addEventListener('click',pagarClicked);
 
+    var casa123 = document.getElementById("cerrarBtn");
+    casa123.addEventListener('click',ocultarCarrito);
+
 }
 
 function sumarCantidad(event){
@@ -93,6 +96,7 @@ function eliminarItemCarrito(event){
 }
 //Funciòn que controla si hay elementos en el carrito. Si no hay oculto el carrito.
 function ocultarCarrito(){
+    console.log("asdasd")
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
     if(carritoItems.childElementCount==0){
         var carrito = document.getElementsByClassName('carrito')[0];
