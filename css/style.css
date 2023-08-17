@@ -4170,13 +4170,20 @@ textarea.form-control-lg {
   max-width: 100%;
 }
 
+.contenedor1{
+} 
+@media (max-width: 900px){
+  .contenedor1{
+    height: 3700px !important;
+  }
+}
 
-
-@media (max-widht: 900px){
+@media (max-width: 900px){
   .imagenComprimir{
     opacity: 0 !important;
     
   }
+  
 }
 
 
