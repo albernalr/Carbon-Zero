@@ -4166,6 +4166,21 @@ textarea.form-control-lg {
 .card-group > .card {
   margin-bottom: 0.75rem; }
 
+.imagenComprimir{
+  max-width: 100%;
+}
+
+
+
+@media (max-widht: 900px){
+  .imagenComprimir{
+    opacity: 0 !important;
+    
+  }
+}
+
+
+
 @media (min-width: 576px) {
   .card-group {
     display: -webkit-box;
