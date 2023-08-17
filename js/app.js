@@ -33,21 +33,7 @@ function ready(){
     var guardarvalor = document.getElementById('agregar_carrito_producto');
     guardarvalor.addEventListener('click', agregarAlCarritoClicked);
         
-
-    var btncarrito = document.getElementById('boton_carrito');
-    btncarrito.addEventListener('click', hacerVisibleCarrito)
     
-
-
-    //Agregamos funcionalidad al boton Agregar al carrito
-    var botonesAgregarAlCarrito = document.getElementsByClassName('btn_comprar');
-    for(var i=0; i<botonesAgregarAlCarrito.length;i++){
-        var button = botonesAgregarAlCarrito[i];
-        button.addEventListener('click', agregarAlCarritoClicked);
-    }
-
-    //Agregamos funcionalidad al botón comprar
-    document.getElementsByClassName('btn-pagar')[0].addEventListener('click',pagarClicked)
 }
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked(){
@@ -72,7 +58,6 @@ function agregarAlCarritoClicked(event){
     // var titulo = item.getElementsByClassName('titulo-item')[0].innerText;
     // var precio = item.getElementsByClassName('precio-item')[0].innerText;
     // var imagenSrc = item.getElementsByClassName('img-item')[0].src;
-    // console.log(imagenSrc);
 
     // agregarItemAlCarrito(titulo, precio, imagenSrc);
 }
@@ -131,7 +116,6 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
 function sumarCantidad(event){
     var buttonClicked = event.target;
     var selector = buttonClicked.parentElement;
-    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual++;
     selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
@@ -141,7 +125,6 @@ function sumarCantidad(event){
 function restarCantidad(event){
     var buttonClicked = event.target;
     var selector = buttonClicked.parentElement;
-    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual--;
     if(cantidadActual>=1){
@@ -187,7 +170,6 @@ function actualizarTotalCarrito(){
         //quitamos el simobolo peso y el punto de milesimos.
         var precio = parseFloat(precioElemento.innerText.replace('$','').replace('.',''));
         var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
-        console.log(precio);
         var cantidad = cantidadItem.value;
         total = total + (precio * cantidad);
     }
